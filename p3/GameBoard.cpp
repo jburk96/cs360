@@ -8,7 +8,7 @@ using namespace std;
 #include "Goblin.h"
 #include "Orc.h"
 #include "Troll.h"
-//hi there
+
 GameBoard::GameBoard(int x, int y)
 {
 	row = (2*x) + 1;
