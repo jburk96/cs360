@@ -71,6 +71,15 @@ void GameBoard::printBoard()
     	
     	if (enemyX < 0)
     		enemyX = 0;
+    		
+    	if (board[enemyX][enemyY] != '|' && board[enemyX][enemyY] != '_' && board[enemyX][enemyY] != '.' && board[enemyX][enemyY] != enemyChar)
+    	{
+    		while (board[enemyX][enemyY] != '|' && board[enemyX][enemyY] != '_' && board[enemyX][enemyY] != '.' && board[enemyX][enemyY] != enemyChar)
+    		{
+    			enemyY -= rand() % 3;
+    			enemyX += rand() % 2;
+    		}
+    	}
     	
     	board[enemyX][enemyY] = enemyChar;
 	}
