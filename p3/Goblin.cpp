@@ -99,6 +99,11 @@ void Goblin::print() const
 	<< yPosition << ") hp = " << health << endl;
 }
 
+/*
+	getDisplayChar - this method has no parameters and returns a char 
+	value. The char value returned will be 'G' or 'g'. The 
+	lower case 'g' indicates that the goblin is dead.
+*/
 const char Goblin::getDisplayChar() const
 {
 	if (alive == false)

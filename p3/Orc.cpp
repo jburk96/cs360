@@ -93,6 +93,11 @@ void Orc::print() const
 	<< yPosition << ") hp = " << health << endl;
 }
 
+/*
+	getDisplayChar - this method has no parameters and returns a char 
+	value. The char value returned will be 'O' or 'o'. The 
+	lower case 'o' indicates that the Orc is dead.
+*/
 const char Orc::getDisplayChar() const
 {
 	if (alive == false)

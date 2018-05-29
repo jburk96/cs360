@@ -10,9 +10,9 @@
 int Enemy::idGenerator = 1;
 /*
 	Enemy - has an initializer list for any const variables needing to 
-	be set from inherited classes. These variables include the id, 
-	maxHealth, strength, and constitution. The constructor the sets 
-	alive to true when the Enemy is created.
+	be set from inherited classes. These variables include the health, 
+	strength, constitution, xPosition, and yPosition. The constructor 
+	the sets alive to true when the Enemy is created.
 */
 Enemy::Enemy(int hp, int strength, int constitution, int xPos, int yPos): 
 	health(hp), 

@@ -118,6 +118,11 @@ void Troll::print() const
 	<< yPosition << ") hp = " << health << endl;
 }
 
+/*
+	getDisplayChar - this method has no parameters and returns a char 
+	value. The char value returned will be 'T' or 't'. The 
+	lower case 't' indicates that the Troll is dead.
+*/
 const char Troll::getDisplayChar() const
 {
 	if (alive == false)
