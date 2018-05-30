@@ -1,34 +1,41 @@
-Node(int val)
+#include <iostream>
+using namespace std;
+
+#include "Node.h"
+
+Node::Node(int val)
+{
+	value = val;
+	left = NULL;
+	right = NULL;
+}
+
+Node::~Node()
 {
 
 }
 
-~Node()
+int Node::getValue()
 {
-
+	return value;
 }
 
-int getValue()
+Node* Node::getLeft()
 {
-
+	return left;
 }
 
-Node* getLeft()
+Node* Node::getRight()
 {
-
+	return right;
 }
 
-Node* getRight()
+void Node::setLeft(Node* l)
 {
-
+	left = l;
 }
 
-void setLeft(Node* l)
+void Node::setRight(Node* r)
 {
-
-}
-
-void setRight(Node* r)
-{
-
+	right = r;
 }
