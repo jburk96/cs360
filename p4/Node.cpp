@@ -12,7 +12,9 @@ Node::Node(int val)
 
 Node::~Node()
 {
-
+	cout << "cleaning node: " << value << endl;
+	delete left;
+	delete right;
 }
 
 int Node::getValue()

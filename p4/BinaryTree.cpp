@@ -12,16 +12,17 @@ BinaryTree::BinaryTree()
 BinaryTree::~BinaryTree()
 {
 	cout << "In BinaryTree destructor" << endl;
+	cleanupTree();
 }
 
 void BinaryTree::cleanupTree()
 {
-
+	cleanupTree(root);
 }
 
 void BinaryTree::cleanupTree(Node *leaf)
 {
-
+	delete leaf;
 }
 
 void BinaryTree::addNode(int value)
@@ -48,10 +49,10 @@ void BinaryTree::addNode(int value, Node *leaf)
 		}
 	}
     
-    else
+    else if (leaf->getValue() < value)
     {
     	if (leaf->getRight() != NULL)
-    		addNode (value, leaf->getLeft());
+    		addNode (value, leaf->getRight());
     		
     	else
     	{
@@ -119,10 +120,16 @@ void BinaryTree::printTree(bool ascending)
 	if (root != NULL)
 	{
 		if (ascending == true)
+		{
+			cout << "========== printing tree ascending ==========" << endl;
 			printTreeAscending(root);
+		}
 		
 		else
+		{
+			cout << "========== printing tree descending ==========" << endl;
 			printTreeDescending(root);
+		}
 	}
 	
 	cout << "done printing tree." << endl;
@@ -130,14 +137,21 @@ void BinaryTree::printTree(bool ascending)
 
 void BinaryTree::printTreeAscending(Node *leaf)
 {
-	cout << "========== printing tree ascending ==========" << endl;
 	if (leaf != NULL)
-		cout << printTreeAscending(leaf->getLeft()) << "\n" << leaf->getValue() << "\n" << printTreeAscending(leaf->getRight());
+	{
+		printTreeAscending(leaf->getLeft()); 
+		cout << "val: " << leaf->getValue() << endl; 
+		printTreeAscending(leaf->getRight());
+	}
 }
 
 void BinaryTree::printTreeDescending(Node *leaf)
 {
 	cout << "========== printing tree descending ==========" << endl;
 	if (leaf != NULL)
-		cout << printTreeDescending(leaf->getRight()) << "\n" << leaf->getValue() << "\n" << printTreeDescending(leaf->getLeft());
+	{
+		printTreeDescending(leaf->getRight()); 
+		cout << "val: " << leaf->getValue() << endl;
+		printTreeDescending(leaf->getLeft());
+	}
 }
