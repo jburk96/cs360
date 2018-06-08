@@ -228,7 +228,6 @@ void BinaryTree::printTreeAscending(Node *leaf)
 */
 void BinaryTree::printTreeDescending(Node *leaf)
 {
-	cout << "========== printing tree descending ==========" << endl;
 	if (leaf != NULL)
 	{
 		printTreeDescending(leaf->getRight()); 

@@ -28,7 +28,7 @@ int main(){
 
 	inFile.close();
 
-    bt->printTree(TRUE);
+    bt->printTree(FALSE);
 
     bt->search(22);
     bt->search(26);

@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS= -std=c++0x -I.
+CXXFLAGS= -std=c++0x -I.
 DEPS = Node.h BinaryTree.h
 OBJ = main.o Node.o BinaryTree.o 
 
@@ -10,4 +10,4 @@ main: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
 
 clean:
-	rm -f *.o main
+	rm -f *.o bst
