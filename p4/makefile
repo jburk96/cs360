@@ -1,5 +1,5 @@
 CC=g++
-CFLAGS=-I.
+CFLAGS= -std=c++0x -I.
 DEPS = Node.h BinaryTree.h
 OBJ = main.o Node.o BinaryTree.o 
 
